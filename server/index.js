@@ -2,16 +2,16 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import {userRouter} from './routes/users.js';
-import {recipeRouter} from './routes/recipes.js';
+import {recipesRouter} from './routes/recipes.js';
 import {DB_CONNECTION} from './env.js';
 
-const app = express();
+const app = express(); 
 
 app.use(express.json());
 app.use(cors());
 
 app.use("/auth", userRouter);
-app.use("/recipe", recipeRouter);
+app.use("/recipe", recipesRouter);
 
 
 
